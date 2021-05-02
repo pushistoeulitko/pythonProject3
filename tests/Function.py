@@ -7,6 +7,7 @@ collect_with_add_element = []
 sort_collect = []
 
 
+
 def print_value(func):
     def wrapper():
         func()
