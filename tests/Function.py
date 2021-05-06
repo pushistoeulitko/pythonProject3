@@ -42,10 +42,10 @@ def adding_an_additional_parameter(collect):
 
 @print_value
 def sorting(collect, sorting_order):
-    if sorting_order == 'desc':
-        sort = False
-    if sorting_order == 'asc':
+    if sorting_order.lower() == 'asc':
         sort = True
+    else:
+        sort = False
     collect.sort(key=lambda data: int(data.simple_count), reverse=sort)
     return collect
 
@@ -66,4 +66,4 @@ def load_sort_add_counter_and_save_in_file(sort_file, sorting_order, output_file
     saving_to_a_file(collect, output_file)
 
 
-load_sort_add_counter_and_save_in_file("simple.dat", 'desc', "simple3.dat")
+load_sort_add_counter_and_save_in_file("simple.dat", "Asc", "simple3.dat")
